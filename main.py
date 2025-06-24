@@ -369,14 +369,14 @@ def create_pdf(training, filename="memory_training.pdf"):
     elif rt['type'] == "动态路径闪记":
         story.append(Paragraph(f"路径: {' → '.join(rt['path'])}", styles["Body"]))
         
-    elif rt['type'] == "数字串记忆":
-        story.append(Paragraph(f"数字串 (长度: {len(rt['digits'])}位):", styles["Body"]))
-        story.append(Paragraph(f"<font size=14>{rt['digits']}</font>", styles["Body"]))
-        story.append(Spacer(1, 12))
-        story.append(Paragraph("记忆提示:", styles["Heading"]))
-        story.append(Paragraph("• 使用110编码将数字转换为图像", styles["Body"]))
-        story.append(Paragraph("• 将图像放置在记忆宫殿中", styles["Body"]))
-        story.append(Paragraph("• 对于长数字串，每3-4位创建一个复合图像", styles["Body"]))
+    # elif rt['type'] == "数字串记忆":
+    #     story.append(Paragraph(f"数字串 (长度: {len(rt['digits'])}位):", styles["Body"]))
+    #     story.append(Paragraph(f"<font size=14>{rt['digits']}</font>", styles["Body"]))
+    #     story.append(Spacer(1, 12))
+    #     story.append(Paragraph("记忆提示:", styles["Heading"]))
+    #     story.append(Paragraph("• 使用110编码将数字转换为图像", styles["Body"]))
+    #     story.append(Paragraph("• 将图像放置在记忆宫殿中", styles["Body"]))
+    #     story.append(Paragraph("• 对于长数字串，每3-4位创建一个复合图像", styles["Body"]))
         
     elif rt['type'] == "二进制矩阵":
         data = rt['content']
